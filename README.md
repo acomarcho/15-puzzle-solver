@@ -6,7 +6,7 @@ This program is wrote using Python for it's main logic calculations and HTML/CSS
 
 The branch and bound algorithm uses a heuristic where the computed cost is the sum of the node's current depth and the amount of tiles (excluding the empty tile) that are out of place.
 
-The user interface is based on Silicon 
+The user interface is based on Silicon Design System, where you can access it here https://www.figma.com/community/file/1082210150893947691.
 
 # Demo
 ![chrome_3dRuyyYSBG](https://user-images.githubusercontent.com/29671825/161415316-a39089aa-b165-47d4-8a9f-c8e88ebf36ca.gif)
