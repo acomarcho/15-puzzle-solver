@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body {
+  background-color: #28293d;
+}
+
+.big-flex {
+  padding: 20px 80px 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.flex-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e405b;
+  color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #ffffff;
+  width: 100%;
+}
+
+.button-row .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.button-row button {
+  background: linear-gradient(180deg, #5561FF 0%, #3643FC 100%, #3643FC 100%);
+  color: #ffffff;
+  outline: none;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: 0.3s all linear;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button-row .menu-btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  outline: none;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 12px;
+  font-size: 14px;
+  transition: 0.3s all linear;
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3);
+}
+
+.button-row button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.text-container {
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+}
+
+.btn-container {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.btn-container-smaller-padding {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.prim-btn {
+  padding: 12px 32px;
+  color: white;
+  background: linear-gradient(180deg, #5561FF 0%, #3643FC 100%, #3643FC 100%);
+  box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  transition: all 0.3s linear;
+}
+
+.prim-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+.stats-container {
+  padding-top: 30px;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stats-container p {
+  font-size: 14px;
+}
+
+.calculating-container {
+  padding-top: 30px;
+  font-size: 14px;
+  text-align: center;
+  color: white;
+}

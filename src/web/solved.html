@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solved Puzzle</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="eel.js"></script>
+  <script>
+    eel.expose(setUpGrid)
+    function setUpGrid(matrix, step, steps, time, nodeCount) {
+      document.querySelector(".calc").textContent = `Searching took ${time.toFixed(5)} seconds | Generated ${nodeCount} nodes`
+      for (let i = 0; i < 16; i ++) {
+        if (matrix[i] == 16) {
+          document.getElementById(`${i}`).textContent = "";
+        } else {
+          document.getElementById(`${i}`).textContent = matrix[i];
+        }
+      }
+      document.querySelector(".step").textContent = `Step ${step}/${steps}`;
+    }
+
+    eel.expose(updateGrid)
+    function updateGrid(matrix, step, steps) {
+      for (let i = 0; i < 16; i ++) {
+        if (matrix[i] == 16) {
+          document.getElementById(`${i}`).textContent = "";
+        } else {
+          document.getElementById(`${i}`).textContent = matrix[i];
+        }
+      }
+      document.querySelector(".step").textContent = `Step ${step}/${steps}`;
+    }
+
+    eel.expose(go_to)
+    function go_to(url) {
+      window.location.replace(url)
+    }
+
+    function returnToMainMenu() {
+      window.alert("Returning to main menu...")
+      eel.reinitialize()
+    }
+
+    eel.solveGrid();
+  </script>
+</head>
+<body>
+  <div class="calculating-container">
+    <p class="calc">Calculation in progress...</p>
+  </div>
+  <div class="big-flex">
+    <div class="flex-row">
+      <div class="box" id="0"></div>
+      <div class="box" id="1"></div>
+      <div class="box" id="2"></div>
+      <div class="box" id="3"></div>
+    </div>
+    <div class="flex-row">
+      <div class="box" id="4"></div>
+      <div class="box" id="5"></div>
+      <div class="box" id="6"></div>
+      <div class="box" id="7"></div>
+    </div>
+    <div class="flex-row">
+      <div class="box" id="8"></div>
+      <div class="box" id="9"></div>
+      <div class="box" id="10"></div>
+      <div class="box" id="11"></div>
+    </div>
+    <div class="flex-row">
+      <div class="box" id="12"></div>
+      <div class="box" id="13"></div>
+      <div class="box" id="14"></div>
+      <div class="box" id="15"></div>
+    </div>
+    <div class="button-row">
+      <div class="left">
+        <button class="menu-btn" onclick="returnToMainMenu()">Menu</button>
+      </div>
+      <div class="right">
+        <button onclick="eel.prevPage()">Previous</button>
+        <p class="step">Step x/x</p>
+        <button onclick="eel.nextPage()">Next</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

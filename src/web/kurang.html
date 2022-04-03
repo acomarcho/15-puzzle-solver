@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Puzzle Statistics</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="eel.js"></script>
+  <script>
+    eel.expose(updateKurangLabels)
+    function updateKurangLabels(kurangMap, kurangPlusX) {
+      for (let i = 1; i <= 16; i ++) {
+        document.querySelector(`.kurang-${i}`).textContent = `Kurang(${i}) = ${kurangMap[i]}`
+      }
+      document.querySelector(".sum").textContent = `SUM(Kurang(i)) + X = ${kurangPlusX}`
+    }
+
+    eel.expose(go_to)
+    function go_to(url) {
+      window.location.replace(url)
+    }
+
+    eel.expose(showErrorMessage)
+    function showErrorMessage() {
+      window.alert("This matrix cannot be solved!\nReturning to main menu...")
+    }
+
+    eel.updateKurang();
+  </script>
+</head>
+<body>
+  <div class="stats-container">
+    <h1>Puzzle statistics</h1>
+    <p class="kurang-1">Kurang(1) = </p>
+    <p class="kurang-2">Kurang(2) = </p>
+    <p class="kurang-3">Kurang(3) = </p>
+    <p class="kurang-4">Kurang(4) = </p>
+    <p class="kurang-5">Kurang(5) = </p>
+    <p class="kurang-6">Kurang(6) = </p>
+    <p class="kurang-7">Kurang(7) = </p>
+    <p class="kurang-8">Kurang(8) = </p>
+    <p class="kurang-9">Kurang(9) = </p>
+    <p class="kurang-10">Kurang(10) = </p>
+    <p class="kurang-11">Kurang(11) = </p>
+    <p class="kurang-12">Kurang(12) = </p>
+    <p class="kurang-13">Kurang(13) = </p>
+    <p class="kurang-14">Kurang(14) = </p>
+    <p class="kurang-15">Kurang(15) = </p>
+    <p class="kurang-16">Kurang(16) = </p>
+    <p class="sum">SUM(Kurang(i)) + X = </p>
+  </div>
+  <div class="btn-container-smaller-padding">
+    <button class="prim-btn" onclick="eel.solveMatrix()">Solve!</button>
+  </div>
+  </div>
+</body>
+</html>

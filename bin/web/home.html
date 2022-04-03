@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Menu</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="eel.js"></script>
+  <script>
+    function openTC(tc) {
+      eel.pyOpenTC(tc)
+    }
+    
+    eel.expose(go_to)
+    function go_to(url) {
+      window.location.replace(url)
+    }
+  </script>
+</head>
+<body>
+  <div class="text-container">
+    <h1>15 Puzzle Solver</h1>
+    <p>Please select a testcase!</p>
+  </div>
+  <div class="btn-container">
+    <button class="prim-btn" onclick="openTC(1)">./test/tc1.txt</button>
+    <button class="prim-btn" onclick="openTC(2)">./test/tc2.txt</button>
+    <button class="prim-btn" onclick="openTC(3)">./test/tc3.txt</button>
+    <button class="prim-btn" onclick="openTC(4)">./test/tc4.txt</button>
+    <button class="prim-btn" onclick="openTC(5)">./test/tc5.txt</button>
+  </div>
+</body>
+</html>

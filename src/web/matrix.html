@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Matrix Preview</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="eel.js"></script>
+  <script>
+    eel.expose(updateGrid);
+    function updateGrid(matrix) {
+      for (let i = 0; i < 16; i ++) {
+        if (matrix[i] == 16) {
+          document.getElementById(`${i}`).textContent = "";
+        } else {
+          document.getElementById(`${i}`).textContent = matrix[i];
+        }
+      }
+    }
+    eel.expose(go_to)
+    function go_to(url) {
+      window.location.replace(url)
+    }
+    
+    eel.updateMatrixPreviewGrid();
+  </script>
+</head>
+<body>
+  <div class="big-flex">
+    <div class="flex-row">
+      <div class="box" id="0"></div>
+      <div class="box" id="1"></div>
+      <div class="box" id="2"></div>
+      <div class="box" id="3"></div>
+    </div>
+    <div class="flex-row">
+      <div class="box" id="4"></div>
+      <div class="box" id="5"></div>
+      <div class="box" id="6"></div>
+      <div class="box" id="7"></div>
+    </div>
+    <div class="flex-row">
+      <div class="box" id="8"></div>
+      <div class="box" id="9"></div>
+      <div class="box" id="10"></div>
+      <div class="box" id="11"></div>
+    </div>
+    <div class="flex-row">
+      <div class="box" id="12"></div>
+      <div class="box" id="13"></div>
+      <div class="box" id="14"></div>
+      <div class="box" id="15"></div>
+    </div>
+  </div>
+  <div class="btn-container-smaller-padding">
+    <button class="prim-btn" onclick="eel.showMatrixStats()">Next!</button>
+  </div>
+</body>
+</html>
